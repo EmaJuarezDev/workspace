@@ -89,12 +89,8 @@ public void guardarArchivo(double[] datos) {
 	} catch (Exception e) {
 		e.printStackTrace();
 	} finally {
-		if (file != null) {
-			try {
-				file.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+		if (printerWriter != null) {
+			printerWriter.close();
 		}
 	}
 }
